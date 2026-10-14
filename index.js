@@ -333,12 +333,6 @@ function render(){
     if(verifiedScores?.missions?.risk_held===true){
       content.append(el('p','cme-observed-only','⚠ ยอดถูกพักตรวจสอบความผิดปกติ กรุณาติดต่อแอดมิน'));
     }
-    if(eventPhase==='preview' && observedTelemetry?.event_id===eventData.id &&
-       observedTelemetry.trust==='client_observed_unverified'){
-      content.append(el('p','cme-observed-only',
-        '📋 ตรวจพบคำตอบ AI จากเครื่องนี้: '+observedTelemetry.observed_turns+
-        ' เทิร์น (ยอดสังเกตก่อนจำกัดเพดาน ไม่ใช่ยอดที่ใช้คิดรางวัล)'));
-    }
     for(const [turns,carrots,icon] of [[100,1,'🎃'],[500,50,'🍬'],[1000,100,'👑']]){
       const card=el('article','cme-mission');
       const heading=el('div','cme-mission-heading');
