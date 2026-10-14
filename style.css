@@ -1,0 +1,100 @@
+/* Isolated server-backed release candidate; no synthetic scoreboard/claims. */
+#catta-monthly-events-release{background:#27182b;color:#ffe9bf;border:1px solid #7f4b37;border-radius:10px;overflow:hidden;margin:10px 0;font:inherit;}
+#catta-monthly-events-release summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#382132;border-left:4px solid #ffa65a;font-weight:800;min-height:44px;}
+#catta-monthly-events-release summary::-webkit-details-marker{display:none;}
+#catta-monthly-events-release summary:focus-visible{outline:2px solid #ffb45d;outline-offset:-3px;}
+#catta-monthly-events-release .cme-body{padding:14px;}
+#catta-monthly-events-release .cme-message{text-align:center;border:1px solid #a16b54;border-radius:12px;padding:24px 12px;line-height:1.7;margin:0;background:#38283d;}
+#catta-monthly-events-release .cme-info h3{font-size:clamp(16px,3vw,23px);margin:0 0 4px;}
+#catta-monthly-events-release .cme-info p{font-size:12px;color:#e4c0a5;line-height:1.55;}
+#catta-monthly-events-release .cme-timer{padding:12px;margin:10px 0;color:#ffdb95;background:#4a2941;border:1px solid #9c6d4a;border-radius:10px;font-weight:700;}
+#catta-monthly-events-release .cme-banner{width:100%;height:auto;object-fit:contain;display:block;border-radius:10px;margin:12px 0;}
+#catta-monthly-events-release .cme-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:12px 0;}
+#catta-monthly-events-release .cme-card{display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;min-width:0;min-height:50px;border:1px solid #906f5b;border-radius:10px;background:#38243b;color:#ffe9bf;padding:5px;cursor:pointer;font:inherit;font-weight:700;}
+#catta-monthly-events-release .cme-card.active{outline:2px solid #ffc16c;}
+#catta-monthly-events-release .cme-card:focus-visible{outline:2px solid #fff;}
+#catta-monthly-events-release .cme-card img{display:block;width:100%;height:auto;object-fit:contain;}
+#catta-monthly-events-release .cme-card span{font-size:clamp(10px,2vw,12px);text-align:center;overflow-wrap:anywhere;}
+#catta-monthly-events-release .cme-content{background:#35213a;border:1px solid #654b62;border-radius:12px;padding:13px;line-height:1.6;}
+#catta-monthly-events-release .cme-content h4{margin:0 0 8px;}
+#catta-monthly-events-release .cme-content p{color:#f2d4c4;font-size:13px;line-height:1.6;}
+#catta-monthly-events-release .cme-reward{margin:9px 0;padding:12px;border-radius:9px;background:#483246;}
+#catta-monthly-events-release .cme-lorebook-box{margin:12px 0;background:#3b253d;border:1px solid #99714f;border-radius:12px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+#catta-monthly-events-release .cme-lorebook-box p{margin:0;color:#efd2b5;font-size:12px;line-height:1.65}
+#catta-monthly-events-release .cme-event-toggle{padding:9px 15px;background:#f6bc69;color:#4a2521;border:1px solid #df9642;border-radius:10px;font-weight:800;cursor:pointer}
+#catta-monthly-events-release .cme-event-toggle:disabled{opacity:.6;cursor:not-allowed}
+#catta-monthly-events-release .cme-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+#catta-monthly-events-release .cme-stat{display:flex;flex-direction:column;gap:5px;border:1px solid #edd6b7;border-radius:11px;background:#fff9ed;color:#634039;padding:13px}
+#catta-monthly-events-release .cme-stat span{font-size:12px}
+#catta-monthly-events-release .cme-stat strong{font-size:26px}
+#catta-monthly-events-release .cme-stat small{font-size:11px}
+#catta-monthly-events-release .cme-ranking,#catta-monthly-events-release .cme-mission-intro{background:#fff5e6;color:#5b362b;border-radius:11px;padding:13px;margin:8px 0}
+#catta-monthly-events-release .cme-mission-intro{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#catta-monthly-events-release .cme-mission{margin:10px 0;padding:14px;background:#fffbf4;color:#57352d;border:1px solid #ead2b7;border-radius:12px}
+#catta-monthly-events-release .cme-mission-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#catta-monthly-events-release .cme-mission-icon{font-size:23px}
+#catta-monthly-events-release .cme-status{margin-left:auto;color:#805a49;background:#f2dfca;border-radius:20px;padding:4px 8px;font-size:11px;white-space:nowrap}
+#catta-monthly-events-release .cme-mission small{display:block;margin:6px 0}
+#catta-monthly-events-release .cme-mission progress{width:100%;height:10px;border:0}
+#catta-monthly-events-release .cme-claim{padding:9px;width:100%;border:1px solid #dcc5aa;border-radius:8px;background:#f3e9dd;color:#8b7463;font-weight:700}
+#catta-monthly-events-release .cme-reward{display:flex;align-items:center;gap:12px;background:#fff9f1;color:#5a382c;border:1px solid #ead6b9}
+#catta-monthly-events-release .cme-reward>div{flex:1;min-width:0}
+#catta-monthly-events-release .cme-reward-icon{font-size:23px}
+#catta-monthly-events-release .cme-reward p{color:#795c4d}
+@media(max-width:440px){#catta-monthly-events-release .cme-stats{grid-template-columns:1fr}}
+
+
+/* Prelaunch preview must never be mistaken for real credited rewards. */
+.cme-preview{padding:10px 12px;border:1px solid #e8aa58;border-radius:8px;background:#322638;color:#ffdfb0;font-weight:600;line-height:1.5}
+
+/* Beta 6: countdown only. Original Halloween purple/cream palette retained. */
+.cme-public-countdown{font-size:clamp(1.35rem,3vw,2.5rem);font-weight:800;text-align:center;padding:22px 10px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.cme-public-notice{text-align:center;font-weight:650;line-height:1.6}
+
+/* Readability fix ONLY: darker letters on existing light mission cards. */
+#catta-monthly-events-release .cme-mission p{color:#604439}
+#catta-monthly-events-release .cme-mission small{color:#654b40}
+#catta-monthly-events-release .cme-mission-heading strong{color:#4c312b}
+#catta-monthly-events-release .cme-claim{color:#5b4035}
+#catta-monthly-events-release .cme-claim:disabled{color:#654b3e;opacity:1}
+#catta-monthly-events-release .cme-stat small{color:#664b3e}
+
+/* beta16: accessible Discord-name ranking; do not change the Halloween palette. */
+#catta-monthly-events-release .cme-ranking{color:#513027}
+#catta-monthly-events-release .cme-ranking>strong{display:block;color:#48271d;font-size:15px;margin:0 0 12px}
+#catta-monthly-events-release .cme-ranking .cme-real-rank{
+  display:grid;grid-template-columns:minmax(34px,auto) minmax(0,1fr) auto;
+  align-items:center;gap:10px;padding:10px 9px;margin:6px 0;
+  border:1px solid #e5cbb1;border-radius:9px;background:#fffdfa;
+  color:#44291e;font-size:13px;line-height:1.45
+}
+#catta-monthly-events-release .cme-ranking .cme-podium{background:#fff1d8;border-color:#d6a86c}
+#catta-monthly-events-release .cme-ranking .cme-rank-number{font-weight:800;color:#75422f;min-width:30px}
+#catta-monthly-events-release .cme-ranking .cme-rank-name{
+  min-width:0;overflow-wrap:anywhere;word-break:break-word;font-weight:700;color:#3e2b25
+}
+#catta-monthly-events-release .cme-ranking .cme-rank-turns{color:#693724;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+#catta-monthly-events-release .cme-ranking .cme-ranking-hint{
+  color:#614334;font-size:11px;line-height:1.6;margin:12px 1px 8px
+}
+#catta-monthly-events-release .cme-ranking .cme-ranking-empty{color:#594035}
+#catta-monthly-events-release .cme-ranking-pager{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap
+}
+#catta-monthly-events-release .cme-ranking .cme-page-position{font-size:12px;font-weight:700;color:#4b332a;white-space:nowrap}
+#catta-monthly-events-release .cme-ranking-pager .cme-page-button{
+  background:#f5bb68;color:#412921;border:1px solid #a7653d;border-radius:8px;
+  padding:7px 11px;font-size:12px;font-weight:800;cursor:pointer;min-height:36px
+}
+#catta-monthly-events-release .cme-ranking-pager .cme-page-button:disabled{
+  background:#e5d8c7;color:#715e52;border-color:#c8b8a7;opacity:1;cursor:not-allowed
+}
+#catta-monthly-events-release .cme-ranking-pager .cme-page-button:focus-visible{
+  outline:2px solid #7e4e38;outline-offset:2px
+}
+@media(max-width:420px){
+ #catta-monthly-events-release .cme-ranking .cme-real-rank{gap:6px;padding:9px 7px;font-size:12px}
+ #catta-monthly-events-release .cme-ranking .cme-rank-turns{font-size:11px}
+ #catta-monthly-events-release .cme-ranking-pager{justify-content:center}
+}
+
