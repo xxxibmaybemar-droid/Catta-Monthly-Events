@@ -282,7 +282,7 @@ function render(){
       ['เทิร์นสะสมของฉัน',Number.isSafeInteger(verifiedScores?.usage?.turns)?String(verifiedScores.usage.turns):'—',
        verifiedScores?.usage?.score_source==='owner_accepted_client_observation'?'ยอดที่ผ่านเพดานนับเทิร์นตามกติกา (ผู้เล่นใช้ API ส่วนตัว)':verifiedScores?'ตรวจสอบจากหลักฐานเซิร์ฟเวอร์แล้ว':'ยังไม่มีข้อมูลยืนยัน'],
       ['อันดับของฉัน',Number.isSafeInteger(verifiedScores?.usage?.rank)?String(verifiedScores.usage.rank):'—',
-       verifiedScores?.usage?.score_source==='owner_accepted_client_observation'?'อันดับตามกติกายอมรับความเสี่ยง':'รอระบบอันดับจริง']]){
+       verifiedScores?.usage?.score_source==='owner_accepted_client_observation'?'อันดับตามกติกา':'รอระบบอันดับจริง']]){
       const card=el('div','cme-stat');
       card.append(el('span','',label),el('strong','',value),el('small','',description));
       cards.append(card);
@@ -354,7 +354,7 @@ function render(){
       bar.setAttribute('aria-valuetext',isVerified?'ตรวจสอบแล้ว '+real+' เทิร์น':'ความคืบหน้ายังไม่ทราบ');card.append(bar);
       card.append(el('p','',(isVerified?real.toLocaleString('th-TH'):'—')+' / '+turns.toLocaleString('th-TH')+
         ' เทิร์น · '+(verifiedScores?.missions?.score_source==='owner_accepted_client_observation'
-          ?'ยอดนับตามกติกาจำกัดปั๊มเทิร์น':isVerified?'ยืนยันจากเซิร์ฟเวอร์':'รอข้อมูลจริง')));
+          ?'ยอดนับตามกติกา':isVerified?'ยืนยันจากเซิร์ฟเวอร์':'รอข้อมูลจริง')));
       const claim=el('button','cme-claim',claimed?'รับแล้ว ✓':pending?'ส่งคำขอแล้ว · รอแอดมิน':rejected?'ไม่ได้รับอนุมัติ':canClaim?(manualReview?'ยื่นขอรับ '+carrots+' แครอท':'กดรับ '+carrots+(virtual?' แครอทเสมือน':' แครอท')):'ยังไม่สามารถรับรางวัล');
       claim.type='button';claim.disabled=!canClaim;
       if(canClaim)claim.addEventListener('click',async()=>{
