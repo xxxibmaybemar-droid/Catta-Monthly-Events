@@ -7,7 +7,7 @@
   "generate_interceptor": "cattaEventVolatileLoreInterceptor",
   "css": "style.css",
   "author": "Catta Team",
-  "version": "0.6.0-beta.16",
+  "version": "0.6.0-beta.17",
   "minimum_client_version": "1.19.0",
   "description": "Public Catta Monthly Events: server-owned countdown and timed gameplay, per-chat Event Lorebook and missions. Prelaunch members see only Halloween event information and the server countdown; full controls appear only after Event opens. Five-minute in-memory UI cache, ten-minute leaderboard refresh, Discord display names verified through Cafe Hub, ten ranked players per page, and score-only updates between messages. Client observations now support volatile Lorebooks. Member and admin permissions remain server-owned. No player-facing Admin Studio or legacy cleanup button. Admin management stays separate. Casa carrot awards require a separate admin approval in /setupeventmm, with server-side duplicate protection. No instant automatic payout; Discord member DMs remain disabled."
 }

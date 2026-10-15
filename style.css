@@ -98,3 +98,83 @@
  #catta-monthly-events-release .cme-ranking-pager{justify-content:center}
 }
 
+/* beta17: SillyTavern normal mobile mode must show desktop-style leaderboard
+   rows. Scoped to this extension: no global theme or score logic changes. */
+@media screen and (max-width:700px){
+  #catta-monthly-events-release .cme-content .cme-ranking{
+    display:block!important;box-sizing:border-box!important;
+    width:100%!important;max-width:100%!important;min-width:0!important;
+    padding:12px 10px!important;background:#fff5e6!important;
+    color:#513027!important;opacity:1!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>strong{
+    display:block!important;margin:0 0 10px!important;
+    color:#48271d!important;-webkit-text-fill-color:#48271d!important;
+    font-size:15px!important;font-weight:800!important;opacity:1!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank{
+    display:grid!important;box-sizing:border-box!important;
+    grid-template-columns:34px minmax(0,1fr) max-content!important;
+    align-items:center!important;gap:8px!important;
+    width:100%!important;min-width:0!important;max-width:100%!important;
+    min-height:44px!important;margin:6px 0!important;padding:8px 9px!important;
+    background:#fffdfa!important;border:1px solid #e5cbb1!important;
+    border-radius:9px!important;color:#44291e!important;
+    font-size:13px!important;line-height:1.35!important;
+    text-align:left!important;opacity:1!important;filter:none!important;
+    white-space:normal!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank.cme-podium{
+    background:#fff1d8!important;border-color:#d6a86c!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-number,
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-name,
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-turns{
+    display:block!important;box-sizing:border-box!important;
+    position:static!important;float:none!important;transform:none!important;
+    margin:0!important;padding:0!important;line-height:1.35!important;
+    opacity:1!important;filter:none!important;text-shadow:none!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-number{
+    min-width:0!important;color:#75422f!important;
+    -webkit-text-fill-color:#75422f!important;
+    font-size:17px!important;font-weight:800!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-name{
+    min-width:0!important;max-width:100%!important;
+    color:#3e2b25!important;-webkit-text-fill-color:#3e2b25!important;
+    font-size:13px!important;font-weight:700!important;
+    white-space:nowrap!important;overflow:hidden!important;
+    text-overflow:ellipsis!important;overflow-wrap:normal!important;
+    word-break:normal!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-turns{
+    min-width:max-content!important;justify-self:end!important;
+    color:#693724!important;-webkit-text-fill-color:#693724!important;
+    font-size:12px!important;font-weight:800!important;
+    white-space:nowrap!important;text-align:right!important;
+    font-variant-numeric:tabular-nums!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking .cme-ranking-hint,
+  #catta-monthly-events-release .cme-content .cme-ranking .cme-page-position{
+    color:#614334!important;-webkit-text-fill-color:#614334!important;
+    opacity:1!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking-pager{
+    display:flex!important;flex-wrap:wrap!important;
+    align-items:center!important;justify-content:center!important;gap:8px!important
+  }
+}
+@media screen and (max-width:360px){
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank{
+    grid-template-columns:28px minmax(0,1fr) max-content!important;
+    gap:5px!important;padding:8px 6px!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-name{
+    font-size:12px!important
+  }
+  #catta-monthly-events-release .cme-content .cme-ranking>.cme-real-rank>.cme-rank-turns{
+    font-size:11px!important
+  }
+}
+
